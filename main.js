@@ -2,10 +2,19 @@ import  { Alchemy, Network } from 'alchemy-sdk'
 import * as dotenv from 'dotenv' 
 dotenv.config()
 
+//available mainnet network are
+const myNetwork =[
+    Network.MATIC_MAINNET,
+    Network.ARB_MAINNET,
+    Network.OPT_MAINNET,
+    Network.ETH_MAINNET,
+    Network.ETH_GOERLI,
+
+]
 
 const config = {
   apiKey: process.env.API_KEY,
-  network: Network.ETH_MAINNET,
+  network: myNetwork[0],
 };
 const alchemy = new Alchemy(config);
 
